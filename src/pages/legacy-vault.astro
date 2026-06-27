@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProtectedNotice from '../components/ProtectedNotice.astro';
+import vault from '../data/vault.json';
+---
+<BaseLayout title="Legacy Vault">
+  <h1 class="text-2xl font-bold text-heritage-green mb-2">Legacy Vault</h1>
+  <p class="text-heritage-charcoal/90 italic mb-4">
+    The Legacy Vault exists for one purpose: to preserve the stories, voices, photographs, documents,
+    traditions, and memories that made the Mattison family who we are. Someday, someone we will never
+    meet may wonder where they came from. We built this so they'll know.
+  </p>
+  <div class="mb-6">
+    <ProtectedNotice message="This area is private by default and reserved for family members. Public access is disabled." />
+  </div>
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
+    {vault.categories.map((c) => (
+      <div class="bg-white rounded-md shadow-sm p-3 text-sm text-heritage-charcoal border-l-4 border-heritage-gold">{c}</div>
+    ))}
+  </div>
+</BaseLayout>

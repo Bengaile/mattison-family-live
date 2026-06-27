@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import schools from '../data/schools.json';
+const clemson = schools.find(s => s.id === 'clemson');
+---
+<BaseLayout title="Clemson">
+  <h1 class="text-2xl font-bold text-heritage-orange mb-2">{clemson?.name}</h1>
+  <p class="text-heritage-charcoal/80 mb-6">{clemson?.summary}</p>
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+    {["Alumni", "Graduation Photos", "Campus Memories", "Football Memories", "Homecoming", "Traditions", "Ring Ceremonies", "Tailgates", "Family Stories"].map((s) => (
+      <div class="bg-white rounded-lg shadow-sm p-5 border-l-4 border-heritage-orange">
+        <h3 class="font-bold text-heritage-charcoal">{s}</h3>
+        <p class="text-sm text-heritage-charcoal/70 mt-1">Content coming soon.</p>
+      </div>
+    ))}
+  </div>
+</BaseLayout>

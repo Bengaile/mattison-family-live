@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionCard from '../components/SectionCard.astro';
+---
+<BaseLayout title="Home">
+  <section class="text-center py-12 bg-heritage-green/5 rounded-xl mb-10">
+    <h1 class="text-3xl md:text-4xl font-bold text-heritage-green mb-3">Preserving Our Family's Story, One Memory at a Time</h1>
+    <p class="max-w-2xl mx-auto text-heritage-charcoal/90">
+      Welcome to MattisonFamily.org — a place created to gather, preserve, and share the memories,
+      stories, photos, and milestones that make up our family history. This site is meant to grow
+      over time with contributions from family members near and far. Whether it is an old photo,
+      a favorite recipe, a funny story, a milestone, a beloved pet, or a memory of someone we love,
+      each piece helps preserve the legacy of the Mattison family for future generations.
+    </p>
+    <a href="/upload-memories" class="inline-block mt-6 bg-heritage-orange text-white px-6 py-2 rounded-md hover:opacity-90">
+      Share a Memory
+    </a>
+  </section>
+
+  <h2 class="text-xl font-bold text-heritage-charcoal mb-4">Explore the Family Archive</h2>
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+    <SectionCard title="Family Members" description="Meet the people who make up our family." href="/family-members" />
+    <SectionCard title="Family Pets" description="Our pets are family too." href="/family-pets" accent="gold" />
+    <SectionCard title="Mattison Farms" description="The land and traditions that shaped us." href="/mattison-farms" />
+    <SectionCard title="Dear Friends" description="Close friends who became family." href="/dear-friends" accent="gold" />
+    <SectionCard title="Clemson" description="A proud family tradition." href="/clemson" accent="orange" />
+    <SectionCard title="Furman" description="Another cherished family connection." href="/furman" />
+    <SectionCard title="Family Recipes" description="Dishes passed down through generations." href="/recipes" accent="gold" />
+    <SectionCard title="Stories & Memories" description="The moments worth remembering." href="/stories" />
+    <SectionCard title="Legacy Vault" description="Our most precious family records." href="/legacy-vault" accent="gold" />
+  </div>
+</BaseLayout>

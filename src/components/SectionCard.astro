@@ -1,0 +1,12 @@
+---
+const { title, description, href, accent = "green" } = Astro.props;
+const accentClasses: Record<string, string> = {
+  green: "border-heritage-green",
+  orange: "border-heritage-orange",
+  gold: "border-heritage-gold",
+};
+---
+<a href={href} class={`block bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border-l-4 ${accentClasses[accent]} p-5`}>
+  <h3 class="text-lg font-bold text-heritage-charcoal mb-1">{title}</h3>
+  <p class="text-sm text-heritage-charcoal/80">{description}</p>
+</a>

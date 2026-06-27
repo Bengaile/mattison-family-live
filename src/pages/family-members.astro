@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProfileCard from '../components/ProfileCard.astro';
+import members from '../data/family-members.json';
+---
+<BaseLayout title="Family Members">
+  <h1 class="text-2xl font-bold text-heritage-green mb-2">Family Members</h1>
+  <p class="text-heritage-charcoal/80 mb-6">Meet the people who make up the Mattison family story.</p>
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+    {members.map((m) => (
+      <ProfileCard name={m.name} summary={m.summary} image={m.photos[0]} badge={m.relationship} />
+    ))}
+  </div>
+</BaseLayout>

@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import farms from '../data/farms.json';
+---
+<BaseLayout title="Mattison Farms">
+  <h1 class="text-2xl font-bold text-heritage-green mb-2">{farms.title}</h1>
+  <p class="text-heritage-charcoal/80 mb-6">{farms.summary}</p>
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+    {farms.sections.map((section) => (
+      <div class="bg-white rounded-lg shadow-sm p-5 border-l-4 border-heritage-green">
+        <h3 class="font-bold text-heritage-charcoal">{section}</h3>
+        <p class="text-sm text-heritage-charcoal/70 mt-1">Content coming soon.</p>
+      </div>
+    ))}
+  </div>
+</BaseLayout>

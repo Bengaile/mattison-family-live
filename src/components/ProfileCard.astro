@@ -1,0 +1,15 @@
+---
+const { name, summary, image, badge } = Astro.props;
+---
+<div class="bg-white rounded-lg shadow-sm overflow-hidden">
+  <div class="bg-heritage-green/10 h-40 flex items-center justify-center text-heritage-green/50 text-sm">
+    {image ? <img src={image} alt={name} class="w-full h-full object-cover" /> : "Photo coming soon"}
+  </div>
+  <div class="p-4">
+    <div class="flex items-center justify-between">
+      <h3 class="font-bold text-heritage-charcoal">{name}</h3>
+      {badge && <span class="text-xs bg-heritage-gold/20 text-heritage-charcoal px-2 py-0.5 rounded">{badge}</span>}
+    </div>
+    <p class="text-sm text-heritage-charcoal/80 mt-1">{summary}</p>
+  </div>
+</div>

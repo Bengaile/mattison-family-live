@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import milestones from '../data/milestones.json';
+---
+<BaseLayout title="Milestones">
+  <h1 class="text-2xl font-bold text-heritage-green mb-2">Milestones</h1>
+  <p class="text-heritage-charcoal/80 mb-6">Births, graduations, weddings, and other moments worth remembering.</p>
+  <div class="space-y-3 border-l-2 border-heritage-green/30 pl-4">
+    {milestones.map((m) => (
+      <div>
+        <p class="text-xs font-bold text-heritage-orange">{m.category}</p>
+        <p class="font-bold text-heritage-charcoal">{m.title}</p>
+        <p class="text-sm text-heritage-charcoal/70">{m.date} — {m.description}</p>
+      </div>
+    ))}
+  </div>
+</BaseLayout>

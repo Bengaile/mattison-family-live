@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProfileCard from '../components/ProfileCard.astro';
+import pets from '../data/pets.json';
+---
+<BaseLayout title="Family Pets">
+  <h1 class="text-2xl font-bold text-heritage-green mb-2">Family Pets</h1>
+  <p class="text-heritage-charcoal/80 mb-6">Pets are family — these are the companions who have shared in the Mattison story.</p>
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+    {pets.map((pet) => (
+      <ProfileCard name={pet.name} summary={pet.summary} image={pet.photos[0]} badge={pet.status} />
+    ))}
+  </div>
+</BaseLayout>

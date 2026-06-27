@@ -1,0 +1,20 @@
+[
+  {
+    "id": "clemson",
+    "name": "Clemson University",
+    "themeColor": "orange",
+    "summary": "A meaningful university connection for many Mattison family members.",
+    "stories": [],
+    "photos": [],
+    "milestones": []
+  },
+  {
+    "id": "furman",
+    "name": "Furman University",
+    "themeColor": "purple",
+    "summary": "A meaningful university connection within the Mattison family story.",
+    "stories": [],
+    "photos": [],
+    "milestones": []
+  }
+]

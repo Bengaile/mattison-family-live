@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import history from '../data/history.json';
+---
+<BaseLayout title="Family History">
+  <h1 class="text-2xl font-bold text-heritage-green mb-2">Family History</h1>
+  <p class="text-heritage-charcoal/80 mb-6">{history.summary}</p>
+  <div class="bg-white rounded-lg shadow-sm p-6 text-sm text-heritage-charcoal/70">
+    Genealogy, old photographs, maps, documents, letters, and historical timeline content coming soon.
+  </div>
+</BaseLayout>

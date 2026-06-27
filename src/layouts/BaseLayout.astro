@@ -1,0 +1,64 @@
+---
+import '../styles/global.css';
+const { title = "Mattison Family" } = Astro.props;
+const navItems = [
+  ["Home", "/"],
+  ["Family Members", "/family-members"],
+  ["Family Tree", "/family-tree"],
+  ["Mattison Farms", "/mattison-farms"],
+  ["Family Pets", "/family-pets"],
+  ["Dear Friends", "/dear-friends"],
+  ["Photos", "/photos"],
+  ["Videos", "/videos"],
+  ["Stories & Memories", "/stories"],
+  ["Family Recipes", "/recipes"],
+  ["Milestones", "/milestones"],
+  ["Family History", "/history"],
+  ["Clemson", "/clemson"],
+  ["Furman", "/furman"],
+  ["Legacy Vault", "/legacy-vault"],
+  ["Upload Memories", "/upload-memories"],
+  ["Contact", "/contact"],
+];
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title} | Mattison Family</title>
+  <meta name="description" content="A private digital family museum preserving the stories, history, and memories of the Mattison family." />
+</head>
+<body class="font-serif min-h-screen flex flex-col">
+  <header class="bg-heritage-green text-heritage-cream sticky top-0 z-10 shadow-md">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="text-xl font-bold tracking-wide">Mattison Family</a>
+      <button id="menu-btn" class="md:hidden text-heritage-cream text-2xl">&#9776;</button>
+      <nav id="nav-menu" class="hidden md:flex flex-wrap gap-4 text-sm">
+        {navItems.map(([label, href]) => (
+          <a href={href} class="hover:text-heritage-gold transition-colors">{label}</a>
+        ))}
+      </nav>
+    </div>
+    <nav id="mobile-nav" class="hidden md:hidden flex-col bg-heritage-green px-4 pb-4 gap-2 text-sm">
+      {navItems.map(([label, href]) => (
+        <a href={href} class="block py-1 hover:text-heritage-gold">{label}</a>
+      ))}
+    </nav>
+  </header>
+
+  <main class="flex-1 max-w-6xl mx-auto px-4 py-8 w-full">
+    <slot />
+  </main>
+
+  <footer class="bg-heritage-charcoal text-heritage-cream text-center py-6 text-sm">
+    <p>&copy; {new Date().getFullYear()} The Mattison Family. A private family archive.</p>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-nav');
+    btn?.addEventListener('click', () => menu?.classList.toggle('hidden'));
+  </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+[
+  { "id": "momo", "name": "MoMo", "nicknames": ["Mocha"], "type": "Cat", "status": "In Memory", "summary": "A beloved family cat whose memory remains central to the family story.", "photos": [] },
+  { "id": "kk", "name": "KK", "nicknames": [], "type": "Dog", "status": "In Memory", "summary": "A cherished family dog remembered fondly.", "photos": [] },
+  { "id": "oliver", "name": "Oliver", "nicknames": [], "type": "Dog", "status": "Living", "summary": "A current family favorite.", "photos": [] },
+  { "id": "fassy", "name": "Fassy", "nicknames": [], "type": "Dog", "status": "Living", "summary": "A playful and loyal member of the family.", "photos": [] },
+  { "id": "finley", "name": "Finley", "nicknames": [], "type": "Dog", "status": "Living", "summary": "Known for his goofy personality.", "photos": [] },
+  { "id": "figaro", "name": "Figaro", "nicknames": [], "type": "Cat", "status": "Living", "summary": "A curious and affectionate cat.", "photos": [] },
+  { "id": "shaggie", "name": "Shaggie", "nicknames": [], "type": "Dog", "status": "In Memory", "summary": "Remembered for his loyalty and gentle spirit.", "photos": [] },
+  { "id": "roo", "name": "Roo", "nicknames": [], "type": "Dog", "status": "Living", "summary": "A beloved companion full of energy.", "photos": [] }
+]

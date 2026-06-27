@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const filters = ["Year", "Event", "Location", "People", "Family Pets", "Farms", "Clemson", "Furman", "Dear Friends", "Holidays", "Vacations"];
+---
+<BaseLayout title="Photos">
+  <h1 class="text-2xl font-bold text-heritage-green mb-2">Photos</h1>
+  <p class="text-heritage-charcoal/80 mb-4">Browse the family photo archive (coming soon).</p>
+  <div class="flex flex-wrap gap-2 mb-6">
+    {filters.map((f) => (
+      <span class="text-xs bg-heritage-green/10 text-heritage-green px-3 py-1 rounded-full">{f}</span>
+    ))}
+  </div>
+  <div class="grid sm:grid-cols-3 md:grid-cols-4 gap-3">
+    {Array.from({ length: 8 }).map(() => (
+      <div class="aspect-square bg-heritage-green/10 rounded-md flex items-center justify-center text-heritage-green/40 text-xs">Photo coming soon</div>
+    ))}
+  </div>
+</BaseLayout>
